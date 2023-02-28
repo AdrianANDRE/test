@@ -17,4 +17,11 @@ Teardown custom
     Log To Console    teardown custom
 Teardown
     Log To Console    teardown
-    
+test "${string}"
+    Log To Console    ${string}
+test number two "${string}"
+    Log To Console    ${string}
+test number three
+    Log To Console    commentaires
+dataset "${var}"
+    Log To Console    ${var}

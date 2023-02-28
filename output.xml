@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230228 09:39:21.589" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230228 12:01:55.905" rpa="false" schemaversion="3">
 <suite id="s1" name="1 Test" source="c:\Users\aandre\Desktop\DepotGit\test\1_test.robot">
-<test id="s1-t1" name="test" line="12">
+<test id="s1-t1" name="test" line="13">
 <kw name="Test Setup" type="SETUP">
 <doc>test setup
 You can define the Setup variable with a keyword for setting up all your tests.
@@ -11,15 +11,15 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <var>${TEST_SETUP_VALUE}</var>
 <arg>${TEST_SETUP}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 09:39:21.632" level="INFO">${TEST_SETUP_VALUE} = Setup</msg>
-<status status="PASS" starttime="20230228 09:39:21.631" endtime="20230228 09:39:21.637"/>
+<msg timestamp="20230228 12:01:55.954" level="INFO">${TEST_SETUP_VALUE} = Setup</msg>
+<status status="PASS" starttime="20230228 12:01:55.954" endtime="20230228 12:01:55.957"/>
 </kw>
 <kw name="Get Variable Value" library="BuiltIn">
 <var>${TEST_1_SETUP_VALUE}</var>
 <arg>${TEST_1_SETUP}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 09:39:21.638" level="INFO">${TEST_1_SETUP_VALUE} = Setup custom</msg>
-<status status="PASS" starttime="20230228 09:39:21.637" endtime="20230228 09:39:21.638"/>
+<msg timestamp="20230228 12:01:55.959" level="INFO">${TEST_1_SETUP_VALUE} = Setup custom</msg>
+<status status="PASS" starttime="20230228 12:01:55.958" endtime="20230228 12:01:55.960"/>
 </kw>
 <if>
 <branch type="IF" condition="$TEST_SETUP_VALUE is not None">
@@ -30,15 +30,15 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>setup</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 09:39:21.648" endtime="20230228 09:39:21.650"/>
+<status status="PASS" starttime="20230228 12:01:55.968" endtime="20230228 12:01:55.969"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.647" endtime="20230228 09:39:21.651"/>
+<status status="PASS" starttime="20230228 12:01:55.967" endtime="20230228 12:01:55.969"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.645" endtime="20230228 09:39:21.651"/>
+<status status="PASS" starttime="20230228 12:01:55.965" endtime="20230228 12:01:55.969"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.638" endtime="20230228 09:39:21.652"/>
+<status status="PASS" starttime="20230228 12:01:55.960" endtime="20230228 12:01:55.969"/>
 </branch>
-<status status="PASS" starttime="20230228 09:39:21.638" endtime="20230228 09:39:21.652"/>
+<status status="PASS" starttime="20230228 12:01:55.960" endtime="20230228 12:01:55.969"/>
 </if>
 <if>
 <branch type="IF" condition="$TEST_1_SETUP_VALUE is not None">
@@ -49,25 +49,146 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>setupcustom</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 09:39:21.657" endtime="20230228 09:39:21.659"/>
+<status status="PASS" starttime="20230228 12:01:55.972" endtime="20230228 12:01:55.972"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.656" endtime="20230228 09:39:21.660"/>
+<status status="PASS" starttime="20230228 12:01:55.971" endtime="20230228 12:01:55.973"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.654" endtime="20230228 09:39:21.660"/>
+<status status="PASS" starttime="20230228 12:01:55.970" endtime="20230228 12:01:55.973"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.653" endtime="20230228 09:39:21.660"/>
+<status status="PASS" starttime="20230228 12:01:55.970" endtime="20230228 12:01:55.973"/>
 </branch>
-<status status="PASS" starttime="20230228 09:39:21.653" endtime="20230228 09:39:21.660"/>
+<status status="PASS" starttime="20230228 12:01:55.969" endtime="20230228 12:01:55.973"/>
 </if>
-<status status="PASS" starttime="20230228 09:39:21.631" endtime="20230228 09:39:21.661"/>
+<status status="PASS" starttime="20230228 12:01:55.953" endtime="20230228 12:01:55.973"/>
+</kw>
+<kw name="Retrieve Dataset">
+<var>&amp;{dataset}</var>
+<doc>Retrieves Squash TM's datasets and stores them in a dictionary.</doc>
+<kw name="Get Test Param" library="squash_tf.TFParamService">
+<var>${var}</var>
+<arg>DS_var</arg>
+<doc>Returns the test case parameter value if it is defined, None otherwise</doc>
+<msg timestamp="20230228 12:01:55.979" level="INFO">${var} = None</msg>
+<status status="PASS" starttime="20230228 12:01:55.979" endtime="20230228 12:01:55.979"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{dataset}</var>
+<arg>var=${var}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230228 12:01:55.980" level="INFO">&amp;{dataset} = { var=None }</msg>
+<status status="PASS" starttime="20230228 12:01:55.980" endtime="20230228 12:01:55.980"/>
+</kw>
+<return>
+<value>&amp;{dataset}</value>
+<status status="PASS" starttime="20230228 12:01:55.980" endtime="20230228 12:01:55.981"/>
+</return>
+<msg timestamp="20230228 12:01:55.981" level="INFO">&amp;{dataset} = { var=None }</msg>
+<status status="PASS" starttime="20230228 12:01:55.978" endtime="20230228 12:01:55.981"/>
+</kw>
+<kw name="Retrieve Datatables">
+<var>&amp;{datatables}</var>
+<doc>Retrieves Squash TM's datatables and stores them in a dictionary.</doc>
+<kw name="Create List" library="BuiltIn">
+<var>@{row_1_1}</var>
+<arg>produit</arg>
+<arg>prix</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230228 12:01:55.987" level="INFO">@{row_1_1} = [ produit | prix ]</msg>
+<status status="PASS" starttime="20230228 12:01:55.987" endtime="20230228 12:01:55.987"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{row_1_2}</var>
+<arg>Expresso</arg>
+<arg>0.40</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230228 12:01:55.987" level="INFO">@{row_1_2} = [ Expresso | 0.40 ]</msg>
+<status status="PASS" starttime="20230228 12:01:55.987" endtime="20230228 12:01:55.988"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{datatable_1}</var>
+<arg>${row_1_1}</arg>
+<arg>${row_1_2}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230228 12:01:55.988" level="INFO">@{datatable_1} = [ ['produit', 'prix'] | ['Expresso', '0.40'] ]</msg>
+<status status="PASS" starttime="20230228 12:01:55.988" endtime="20230228 12:01:55.988"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{datatables}</var>
+<arg>datatable_1=${datatable_1}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230228 12:01:55.989" level="INFO">&amp;{datatables} = { datatable_1=[['produit', 'prix'], ['Expresso', '0.40']] }</msg>
+<status status="PASS" starttime="20230228 12:01:55.988" endtime="20230228 12:01:55.989"/>
+</kw>
+<return>
+<value>&amp;{datatables}</value>
+<status status="PASS" starttime="20230228 12:01:55.989" endtime="20230228 12:01:55.989"/>
+</return>
+<msg timestamp="20230228 12:01:55.989" level="INFO">&amp;{datatables} = { datatable_1=[['produit', 'prix'], ['Expresso', '0.40']] }</msg>
+<status status="PASS" starttime="20230228 12:01:55.986" endtime="20230228 12:01:55.989"/>
+</kw>
+<kw name="Retrieve Docstrings">
+<var>&amp;{docstrings}</var>
+<doc>Retrieves Squash TM's docstrings and stores them in a dictionary.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<var>${docstring_1}</var>
+<arg>zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230228 12:01:55.994" level="INFO">${docstring_1} = zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbbbbbbbbbbbbbbbb...</msg>
+<status status="PASS" starttime="20230228 12:01:55.994" endtime="20230228 12:01:55.995"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{docstrings}</var>
+<arg>docstring_1=${docstring_1}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230228 12:01:55.995" level="INFO">&amp;{docstrings} = { docstring_1=zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbb...</msg>
+<status status="PASS" starttime="20230228 12:01:55.995" endtime="20230228 12:01:55.996"/>
+</kw>
+<return>
+<value>&amp;{docstrings}</value>
+<status status="PASS" starttime="20230228 12:01:55.996" endtime="20230228 12:01:55.996"/>
+</return>
+<msg timestamp="20230228 12:01:55.996" level="INFO">&amp;{docstrings} = { docstring_1=zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbb...</msg>
+<status status="PASS" starttime="20230228 12:01:55.993" endtime="20230228 12:01:55.996"/>
 </kw>
 <kw name="Given voici un test" library="test">
 <kw name="Log To Console" library="BuiltIn">
 <arg>c'est un test</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 09:39:21.662" endtime="20230228 09:39:21.663"/>
+<status status="PASS" starttime="20230228 12:01:55.998" endtime="20230228 12:01:55.998"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.661" endtime="20230228 09:39:21.663"/>
+<status status="PASS" starttime="20230228 12:01:55.997" endtime="20230228 12:01:55.999"/>
+</kw>
+<kw name="Given test &quot;${datatables}[datatable_1]&quot;" library="test" sourcename="test &quot;${string}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${string}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230228 12:01:56.000" endtime="20230228 12:01:56.001"/>
+</kw>
+<status status="PASS" starttime="20230228 12:01:55.999" endtime="20230228 12:01:56.001"/>
+</kw>
+<kw name="Given test number two &quot;${docstrings}[docstring_1]&quot;" library="test" sourcename="test number two &quot;${string}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${string}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230228 12:01:56.003" endtime="20230228 12:01:56.004"/>
+</kw>
+<status status="PASS" starttime="20230228 12:01:56.002" endtime="20230228 12:01:56.004"/>
+</kw>
+<kw name="Given test number three" library="test">
+<kw name="Log To Console" library="BuiltIn">
+<arg>commentaires</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230228 12:01:56.005" endtime="20230228 12:01:56.006"/>
+</kw>
+<status status="PASS" starttime="20230228 12:01:56.005" endtime="20230228 12:01:56.006"/>
+</kw>
+<kw name="Given dataset &quot;${dataset}[var]&quot;" library="test" sourcename="dataset &quot;${var}&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${var}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230228 12:01:56.008" endtime="20230228 12:01:56.008"/>
+</kw>
+<status status="PASS" starttime="20230228 12:01:56.007" endtime="20230228 12:01:56.009"/>
 </kw>
 <kw name="Test Teardown" type="TEARDOWN">
 <doc>test teardown
@@ -78,15 +199,15 @@ If both are defined, Teardown will be run after Teardown custom.</doc>
 <var>${TEST_1_TEARDOWN_VALUE}</var>
 <arg>${TEST_1_TEARDOWN}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 09:39:21.665" level="INFO">${TEST_1_TEARDOWN_VALUE} = Teardown custom</msg>
-<status status="PASS" starttime="20230228 09:39:21.664" endtime="20230228 09:39:21.665"/>
+<msg timestamp="20230228 12:01:56.012" level="INFO">${TEST_1_TEARDOWN_VALUE} = Teardown custom</msg>
+<status status="PASS" starttime="20230228 12:01:56.011" endtime="20230228 12:01:56.012"/>
 </kw>
 <kw name="Get Variable Value" library="BuiltIn">
 <var>${TEST_TEARDOWN_VALUE}</var>
 <arg>${TEST_TEARDOWN}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 09:39:21.666" level="INFO">${TEST_TEARDOWN_VALUE} = Teardown</msg>
-<status status="PASS" starttime="20230228 09:39:21.665" endtime="20230228 09:39:21.666"/>
+<msg timestamp="20230228 12:01:56.013" level="INFO">${TEST_TEARDOWN_VALUE} = Teardown</msg>
+<status status="PASS" starttime="20230228 12:01:56.012" endtime="20230228 12:01:56.013"/>
 </kw>
 <if>
 <branch type="IF" condition="$TEST_1_TEARDOWN_VALUE is not None">
@@ -97,15 +218,15 @@ If both are defined, Teardown will be run after Teardown custom.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>teardown custom</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 09:39:21.670" endtime="20230228 09:39:21.672"/>
+<status status="PASS" starttime="20230228 12:01:56.016" endtime="20230228 12:01:56.017"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.670" endtime="20230228 09:39:21.672"/>
+<status status="PASS" starttime="20230228 12:01:56.016" endtime="20230228 12:01:56.018"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.668" endtime="20230228 09:39:21.672"/>
+<status status="PASS" starttime="20230228 12:01:56.014" endtime="20230228 12:01:56.018"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.667" endtime="20230228 09:39:21.672"/>
+<status status="PASS" starttime="20230228 12:01:56.014" endtime="20230228 12:01:56.018"/>
 </branch>
-<status status="PASS" starttime="20230228 09:39:21.667" endtime="20230228 09:39:21.672"/>
+<status status="PASS" starttime="20230228 12:01:56.014" endtime="20230228 12:01:56.018"/>
 </if>
 <if>
 <branch type="IF" condition="$TEST_TEARDOWN_VALUE is not None">
@@ -116,26 +237,26 @@ If both are defined, Teardown will be run after Teardown custom.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>teardown</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 09:39:21.675" endtime="20230228 09:39:21.675"/>
+<status status="PASS" starttime="20230228 12:01:56.021" endtime="20230228 12:01:56.021"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.674" endtime="20230228 09:39:21.676"/>
+<status status="PASS" starttime="20230228 12:01:56.020" endtime="20230228 12:01:56.022"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.673" endtime="20230228 09:39:21.676"/>
+<status status="PASS" starttime="20230228 12:01:56.019" endtime="20230228 12:01:56.022"/>
 </kw>
-<status status="PASS" starttime="20230228 09:39:21.672" endtime="20230228 09:39:21.676"/>
+<status status="PASS" starttime="20230228 12:01:56.018" endtime="20230228 12:01:56.022"/>
 </branch>
-<status status="PASS" starttime="20230228 09:39:21.672" endtime="20230228 09:39:21.676"/>
+<status status="PASS" starttime="20230228 12:01:56.018" endtime="20230228 12:01:56.022"/>
 </if>
-<status status="PASS" starttime="20230228 09:39:21.664" endtime="20230228 09:39:21.677"/>
+<status status="PASS" starttime="20230228 12:01:56.010" endtime="20230228 12:01:56.023"/>
 </kw>
 <doc>test</doc>
-<status status="PASS" starttime="20230228 09:39:21.630" endtime="20230228 09:39:21.677"/>
+<status status="PASS" starttime="20230228 12:01:55.952" endtime="20230228 12:01:56.023"/>
 </test>
 <doc>test</doc>
 <meta name="Automation priority">null</meta>
 <meta name="ID">1</meta>
 <meta name="Test case importance">Low</meta>
-<status status="PASS" starttime="20230228 09:39:21.594" endtime="20230228 09:39:21.680"/>
+<status status="PASS" starttime="20230228 12:01:55.910" endtime="20230228 12:01:56.025"/>
 </suite>
 <statistics>
 <total>
