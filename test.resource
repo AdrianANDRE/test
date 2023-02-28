@@ -27,4 +27,4 @@ test number three
     ${code} =    Get Test Param    TC_CUF_code
     Log To Console    ${code}
 dataset "${var}"
-    Log To Console    ${var}
+    Log To Console    ${var}c'est dataset
