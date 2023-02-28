@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230228 12:01:55.905" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230228 12:15:05.232" rpa="false" schemaversion="3">
 <suite id="s1" name="1 Test" source="c:\Users\aandre\Desktop\DepotGit\test\1_test.robot">
 <test id="s1-t1" name="test" line="13">
 <kw name="Test Setup" type="SETUP">
@@ -11,15 +11,15 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <var>${TEST_SETUP_VALUE}</var>
 <arg>${TEST_SETUP}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 12:01:55.954" level="INFO">${TEST_SETUP_VALUE} = Setup</msg>
-<status status="PASS" starttime="20230228 12:01:55.954" endtime="20230228 12:01:55.957"/>
+<msg timestamp="20230228 12:15:05.276" level="INFO">${TEST_SETUP_VALUE} = Setup</msg>
+<status status="PASS" starttime="20230228 12:15:05.275" endtime="20230228 12:15:05.279"/>
 </kw>
 <kw name="Get Variable Value" library="BuiltIn">
 <var>${TEST_1_SETUP_VALUE}</var>
 <arg>${TEST_1_SETUP}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 12:01:55.959" level="INFO">${TEST_1_SETUP_VALUE} = Setup custom</msg>
-<status status="PASS" starttime="20230228 12:01:55.958" endtime="20230228 12:01:55.960"/>
+<msg timestamp="20230228 12:15:05.280" level="INFO">${TEST_1_SETUP_VALUE} = Setup custom</msg>
+<status status="PASS" starttime="20230228 12:15:05.280" endtime="20230228 12:15:05.280"/>
 </kw>
 <if>
 <branch type="IF" condition="$TEST_SETUP_VALUE is not None">
@@ -30,15 +30,15 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>setup</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:55.968" endtime="20230228 12:01:55.969"/>
+<status status="PASS" starttime="20230228 12:15:05.287" endtime="20230228 12:15:05.288"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.967" endtime="20230228 12:01:55.969"/>
+<status status="PASS" starttime="20230228 12:15:05.286" endtime="20230228 12:15:05.288"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.965" endtime="20230228 12:01:55.969"/>
+<status status="PASS" starttime="20230228 12:15:05.283" endtime="20230228 12:15:05.289"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.960" endtime="20230228 12:01:55.969"/>
+<status status="PASS" starttime="20230228 12:15:05.281" endtime="20230228 12:15:05.289"/>
 </branch>
-<status status="PASS" starttime="20230228 12:01:55.960" endtime="20230228 12:01:55.969"/>
+<status status="PASS" starttime="20230228 12:15:05.281" endtime="20230228 12:15:05.289"/>
 </if>
 <if>
 <branch type="IF" condition="$TEST_1_SETUP_VALUE is not None">
@@ -49,17 +49,17 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>setupcustom</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:55.972" endtime="20230228 12:01:55.972"/>
+<status status="PASS" starttime="20230228 12:15:05.292" endtime="20230228 12:15:05.292"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.971" endtime="20230228 12:01:55.973"/>
+<status status="PASS" starttime="20230228 12:15:05.292" endtime="20230228 12:15:05.293"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.970" endtime="20230228 12:01:55.973"/>
+<status status="PASS" starttime="20230228 12:15:05.290" endtime="20230228 12:15:05.293"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.970" endtime="20230228 12:01:55.973"/>
+<status status="PASS" starttime="20230228 12:15:05.289" endtime="20230228 12:15:05.293"/>
 </branch>
-<status status="PASS" starttime="20230228 12:01:55.969" endtime="20230228 12:01:55.973"/>
+<status status="PASS" starttime="20230228 12:15:05.289" endtime="20230228 12:15:05.293"/>
 </if>
-<status status="PASS" starttime="20230228 12:01:55.953" endtime="20230228 12:01:55.973"/>
+<status status="PASS" starttime="20230228 12:15:05.275" endtime="20230228 12:15:05.293"/>
 </kw>
 <kw name="Retrieve Dataset">
 <var>&amp;{dataset}</var>
@@ -68,22 +68,22 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <var>${var}</var>
 <arg>DS_var</arg>
 <doc>Returns the test case parameter value if it is defined, None otherwise</doc>
-<msg timestamp="20230228 12:01:55.979" level="INFO">${var} = None</msg>
-<status status="PASS" starttime="20230228 12:01:55.979" endtime="20230228 12:01:55.979"/>
+<msg timestamp="20230228 12:15:05.300" level="INFO">${var} = None</msg>
+<status status="PASS" starttime="20230228 12:15:05.299" endtime="20230228 12:15:05.300"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>&amp;{dataset}</var>
 <arg>var=${var}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230228 12:01:55.980" level="INFO">&amp;{dataset} = { var=None }</msg>
-<status status="PASS" starttime="20230228 12:01:55.980" endtime="20230228 12:01:55.980"/>
+<msg timestamp="20230228 12:15:05.300" level="INFO">&amp;{dataset} = { var=None }</msg>
+<status status="PASS" starttime="20230228 12:15:05.300" endtime="20230228 12:15:05.301"/>
 </kw>
 <return>
 <value>&amp;{dataset}</value>
-<status status="PASS" starttime="20230228 12:01:55.980" endtime="20230228 12:01:55.981"/>
+<status status="PASS" starttime="20230228 12:15:05.301" endtime="20230228 12:15:05.301"/>
 </return>
-<msg timestamp="20230228 12:01:55.981" level="INFO">&amp;{dataset} = { var=None }</msg>
-<status status="PASS" starttime="20230228 12:01:55.978" endtime="20230228 12:01:55.981"/>
+<msg timestamp="20230228 12:15:05.301" level="INFO">&amp;{dataset} = { var=None }</msg>
+<status status="PASS" starttime="20230228 12:15:05.299" endtime="20230228 12:15:05.301"/>
 </kw>
 <kw name="Retrieve Datatables">
 <var>&amp;{datatables}</var>
@@ -93,38 +93,38 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <arg>produit</arg>
 <arg>prix</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230228 12:01:55.987" level="INFO">@{row_1_1} = [ produit | prix ]</msg>
-<status status="PASS" starttime="20230228 12:01:55.987" endtime="20230228 12:01:55.987"/>
+<msg timestamp="20230228 12:15:05.309" level="INFO">@{row_1_1} = [ produit | prix ]</msg>
+<status status="PASS" starttime="20230228 12:15:05.308" endtime="20230228 12:15:05.309"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>@{row_1_2}</var>
 <arg>Expresso</arg>
 <arg>0.40</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230228 12:01:55.987" level="INFO">@{row_1_2} = [ Expresso | 0.40 ]</msg>
-<status status="PASS" starttime="20230228 12:01:55.987" endtime="20230228 12:01:55.988"/>
+<msg timestamp="20230228 12:15:05.309" level="INFO">@{row_1_2} = [ Expresso | 0.40 ]</msg>
+<status status="PASS" starttime="20230228 12:15:05.309" endtime="20230228 12:15:05.309"/>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <var>@{datatable_1}</var>
 <arg>${row_1_1}</arg>
 <arg>${row_1_2}</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230228 12:01:55.988" level="INFO">@{datatable_1} = [ ['produit', 'prix'] | ['Expresso', '0.40'] ]</msg>
-<status status="PASS" starttime="20230228 12:01:55.988" endtime="20230228 12:01:55.988"/>
+<msg timestamp="20230228 12:15:05.310" level="INFO">@{datatable_1} = [ ['produit', 'prix'] | ['Expresso', '0.40'] ]</msg>
+<status status="PASS" starttime="20230228 12:15:05.309" endtime="20230228 12:15:05.310"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>&amp;{datatables}</var>
 <arg>datatable_1=${datatable_1}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230228 12:01:55.989" level="INFO">&amp;{datatables} = { datatable_1=[['produit', 'prix'], ['Expresso', '0.40']] }</msg>
-<status status="PASS" starttime="20230228 12:01:55.988" endtime="20230228 12:01:55.989"/>
+<msg timestamp="20230228 12:15:05.311" level="INFO">&amp;{datatables} = { datatable_1=[['produit', 'prix'], ['Expresso', '0.40']] }</msg>
+<status status="PASS" starttime="20230228 12:15:05.310" endtime="20230228 12:15:05.312"/>
 </kw>
 <return>
 <value>&amp;{datatables}</value>
-<status status="PASS" starttime="20230228 12:01:55.989" endtime="20230228 12:01:55.989"/>
+<status status="PASS" starttime="20230228 12:15:05.312" endtime="20230228 12:15:05.312"/>
 </return>
-<msg timestamp="20230228 12:01:55.989" level="INFO">&amp;{datatables} = { datatable_1=[['produit', 'prix'], ['Expresso', '0.40']] }</msg>
-<status status="PASS" starttime="20230228 12:01:55.986" endtime="20230228 12:01:55.989"/>
+<msg timestamp="20230228 12:15:05.313" level="INFO">&amp;{datatables} = { datatable_1=[['produit', 'prix'], ['Expresso', '0.40']] }</msg>
+<status status="PASS" starttime="20230228 12:15:05.308" endtime="20230228 12:15:05.314"/>
 </kw>
 <kw name="Retrieve Docstrings">
 <var>&amp;{docstrings}</var>
@@ -133,62 +133,64 @@ If both are defined, Setup custom will be run after Setup.</doc>
 <var>${docstring_1}</var>
 <arg>zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230228 12:01:55.994" level="INFO">${docstring_1} = zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbbbbbbbbbbbbbbbb...</msg>
-<status status="PASS" starttime="20230228 12:01:55.994" endtime="20230228 12:01:55.995"/>
+<msg timestamp="20230228 12:15:05.318" level="INFO">${docstring_1} = zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbbbbbbbbbbbbbbbb...</msg>
+<status status="PASS" starttime="20230228 12:15:05.318" endtime="20230228 12:15:05.318"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>&amp;{docstrings}</var>
 <arg>docstring_1=${docstring_1}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230228 12:01:55.995" level="INFO">&amp;{docstrings} = { docstring_1=zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbb...</msg>
-<status status="PASS" starttime="20230228 12:01:55.995" endtime="20230228 12:01:55.996"/>
+<msg timestamp="20230228 12:15:05.319" level="INFO">&amp;{docstrings} = { docstring_1=zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbb...</msg>
+<status status="PASS" starttime="20230228 12:15:05.318" endtime="20230228 12:15:05.319"/>
 </kw>
 <return>
 <value>&amp;{docstrings}</value>
-<status status="PASS" starttime="20230228 12:01:55.996" endtime="20230228 12:01:55.996"/>
+<status status="PASS" starttime="20230228 12:15:05.319" endtime="20230228 12:15:05.320"/>
 </return>
-<msg timestamp="20230228 12:01:55.996" level="INFO">&amp;{docstrings} = { docstring_1=zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbb...</msg>
-<status status="PASS" starttime="20230228 12:01:55.993" endtime="20230228 12:01:55.996"/>
+<msg timestamp="20230228 12:15:05.320" level="INFO">&amp;{docstrings} = { docstring_1=zertyuioplkjhgfdqsxcvbh,fazertryhebzhehzbbhbsfghbdffffffffffffftttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttbbbbbb...</msg>
+<status status="PASS" starttime="20230228 12:15:05.317" endtime="20230228 12:15:05.321"/>
 </kw>
 <kw name="Given voici un test" library="test">
 <kw name="Log To Console" library="BuiltIn">
 <arg>c'est un test</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:55.998" endtime="20230228 12:01:55.998"/>
+<status status="PASS" starttime="20230228 12:15:05.323" endtime="20230228 12:15:05.324"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.997" endtime="20230228 12:01:55.999"/>
+<status status="PASS" starttime="20230228 12:15:05.322" endtime="20230228 12:15:05.324"/>
 </kw>
 <kw name="Given test &quot;${datatables}[datatable_1]&quot;" library="test" sourcename="test &quot;${string}&quot;">
 <kw name="Log To Console" library="BuiltIn">
 <arg>${string}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:56.000" endtime="20230228 12:01:56.001"/>
+<status status="PASS" starttime="20230228 12:15:05.326" endtime="20230228 12:15:05.326"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:55.999" endtime="20230228 12:01:56.001"/>
+<status status="PASS" starttime="20230228 12:15:05.325" endtime="20230228 12:15:05.327"/>
 </kw>
 <kw name="Given test number two &quot;${docstrings}[docstring_1]&quot;" library="test" sourcename="test number two &quot;${string}&quot;">
 <kw name="Log To Console" library="BuiltIn">
 <arg>${string}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:56.003" endtime="20230228 12:01:56.004"/>
+<status status="PASS" starttime="20230228 12:15:05.330" endtime="20230228 12:15:05.331"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.002" endtime="20230228 12:01:56.004"/>
+<status status="PASS" starttime="20230228 12:15:05.329" endtime="20230228 12:15:05.332"/>
 </kw>
 <kw name="Given test number three" library="test">
-<kw name="Log To Console" library="BuiltIn">
-<arg>commentaires</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:56.005" endtime="20230228 12:01:56.006"/>
+<kw name="Get Test Param" library="squash_tf.TFParamService">
+<var>${code}</var>
+<arg>TC_CUF_code</arg>
+<doc>Returns the test case parameter value if it is defined, None otherwise</doc>
+<msg timestamp="20230228 12:15:05.333" level="INFO">${code} = None</msg>
+<status status="PASS" starttime="20230228 12:15:05.333" endtime="20230228 12:15:05.334"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.005" endtime="20230228 12:01:56.006"/>
+<status status="PASS" starttime="20230228 12:15:05.332" endtime="20230228 12:15:05.334"/>
 </kw>
 <kw name="Given dataset &quot;${dataset}[var]&quot;" library="test" sourcename="dataset &quot;${var}&quot;">
 <kw name="Log To Console" library="BuiltIn">
 <arg>${var}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:56.008" endtime="20230228 12:01:56.008"/>
+<status status="PASS" starttime="20230228 12:15:05.335" endtime="20230228 12:15:05.336"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.007" endtime="20230228 12:01:56.009"/>
+<status status="PASS" starttime="20230228 12:15:05.335" endtime="20230228 12:15:05.337"/>
 </kw>
 <kw name="Test Teardown" type="TEARDOWN">
 <doc>test teardown
@@ -199,15 +201,15 @@ If both are defined, Teardown will be run after Teardown custom.</doc>
 <var>${TEST_1_TEARDOWN_VALUE}</var>
 <arg>${TEST_1_TEARDOWN}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 12:01:56.012" level="INFO">${TEST_1_TEARDOWN_VALUE} = Teardown custom</msg>
-<status status="PASS" starttime="20230228 12:01:56.011" endtime="20230228 12:01:56.012"/>
+<msg timestamp="20230228 12:15:05.339" level="INFO">${TEST_1_TEARDOWN_VALUE} = Teardown custom</msg>
+<status status="PASS" starttime="20230228 12:15:05.339" endtime="20230228 12:15:05.340"/>
 </kw>
 <kw name="Get Variable Value" library="BuiltIn">
 <var>${TEST_TEARDOWN_VALUE}</var>
 <arg>${TEST_TEARDOWN}</arg>
 <doc>Returns variable value or ``default`` if the variable does not exist.</doc>
-<msg timestamp="20230228 12:01:56.013" level="INFO">${TEST_TEARDOWN_VALUE} = Teardown</msg>
-<status status="PASS" starttime="20230228 12:01:56.012" endtime="20230228 12:01:56.013"/>
+<msg timestamp="20230228 12:15:05.341" level="INFO">${TEST_TEARDOWN_VALUE} = Teardown</msg>
+<status status="PASS" starttime="20230228 12:15:05.340" endtime="20230228 12:15:05.341"/>
 </kw>
 <if>
 <branch type="IF" condition="$TEST_1_TEARDOWN_VALUE is not None">
@@ -218,15 +220,15 @@ If both are defined, Teardown will be run after Teardown custom.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>teardown custom</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:56.016" endtime="20230228 12:01:56.017"/>
+<status status="PASS" starttime="20230228 12:15:05.346" endtime="20230228 12:15:05.347"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.016" endtime="20230228 12:01:56.018"/>
+<status status="PASS" starttime="20230228 12:15:05.345" endtime="20230228 12:15:05.348"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.014" endtime="20230228 12:01:56.018"/>
+<status status="PASS" starttime="20230228 12:15:05.341" endtime="20230228 12:15:05.348"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.014" endtime="20230228 12:01:56.018"/>
+<status status="PASS" starttime="20230228 12:15:05.341" endtime="20230228 12:15:05.348"/>
 </branch>
-<status status="PASS" starttime="20230228 12:01:56.014" endtime="20230228 12:01:56.018"/>
+<status status="PASS" starttime="20230228 12:15:05.341" endtime="20230228 12:15:05.349"/>
 </if>
 <if>
 <branch type="IF" condition="$TEST_TEARDOWN_VALUE is not None">
@@ -237,26 +239,26 @@ If both are defined, Teardown will be run after Teardown custom.</doc>
 <kw name="Log To Console" library="BuiltIn">
 <arg>teardown</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230228 12:01:56.021" endtime="20230228 12:01:56.021"/>
+<status status="PASS" starttime="20230228 12:15:05.351" endtime="20230228 12:15:05.351"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.020" endtime="20230228 12:01:56.022"/>
+<status status="PASS" starttime="20230228 12:15:05.350" endtime="20230228 12:15:05.352"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.019" endtime="20230228 12:01:56.022"/>
+<status status="PASS" starttime="20230228 12:15:05.349" endtime="20230228 12:15:05.352"/>
 </kw>
-<status status="PASS" starttime="20230228 12:01:56.018" endtime="20230228 12:01:56.022"/>
+<status status="PASS" starttime="20230228 12:15:05.349" endtime="20230228 12:15:05.352"/>
 </branch>
-<status status="PASS" starttime="20230228 12:01:56.018" endtime="20230228 12:01:56.022"/>
+<status status="PASS" starttime="20230228 12:15:05.349" endtime="20230228 12:15:05.352"/>
 </if>
-<status status="PASS" starttime="20230228 12:01:56.010" endtime="20230228 12:01:56.023"/>
+<status status="PASS" starttime="20230228 12:15:05.338" endtime="20230228 12:15:05.352"/>
 </kw>
 <doc>test</doc>
-<status status="PASS" starttime="20230228 12:01:55.952" endtime="20230228 12:01:56.023"/>
+<status status="PASS" starttime="20230228 12:15:05.274" endtime="20230228 12:15:05.353"/>
 </test>
 <doc>test</doc>
 <meta name="Automation priority">null</meta>
 <meta name="ID">1</meta>
 <meta name="Test case importance">Low</meta>
-<status status="PASS" starttime="20230228 12:01:55.910" endtime="20230228 12:01:56.025"/>
+<status status="PASS" starttime="20230228 12:15:05.237" endtime="20230228 12:15:05.354"/>
 </suite>
 <statistics>
 <total>

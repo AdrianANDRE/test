@@ -1,3 +1,5 @@
+*** Settings ***
+Library    squash_tf.TFParamService
 *** Variables ***
 ${TEST_SETUP}    Setup
 ${TEST_1_SETUP}    Setup custom
@@ -22,6 +24,6 @@ test "${string}"
 test number two "${string}"
     Log To Console    ${string}
 test number three
-    Log To Console    commentaires
+    ${code} =    Get Test Param    TC_CUF_code
 dataset "${var}"
     Log To Console    ${var}

@@ -24,7 +24,6 @@ test
     # bla bla
     Given dataset "${dataset}[var]"
 
-
 *** Keywords ***
 Test Setup
     [Documentation]    test setup
